@@ -1,1 +1,1 @@
-# BharatInterntemp-2
+A simple web-based temperature converter project using HTML, CSS, and JavaScript. Users can input a value and choose between Fahrenheit and Celsius. The Temperature Converter I made calculates and displays the converted temperature instantly. 
