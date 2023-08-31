@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <div class="container">
+        <h1>temperature converter</h1>
+        <input type="number" id="tempinpt" placeholder="Enter temperature"><br>
+        <br>
+        <label for="cars">Choose:</label><br><br>
+    <select id="optsel">
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="celsius">Celsius</option>
+    </select><br>
+    <button onclick="tempconv()"  id="btns">Convert</button>
+    <button id="result">Converted degree</button>
+</div>
+    <script>
+        function tempconv() {
+            const temperature = parseFloat(document.getElementById("tempinpt").value);
+            const selectedUnit = document.getElementById("optsel").value;
+            let convertedTemperature = 0;
+
+            if (selectedUnit === "fahrenheit") {
+                convertedTemperature = (temperature - 32) * (5/9);
+                document.getElementById("result").innerHTML = `${temperature} Fahrenheit is ${convertedTemperature.toFixed(2)} Celsius.`;
+            } else if (selectedUnit === "celsius") {
+                convertedTemperature = (temperature * 9/5) + 32;
+                document.getElementById("result").innerHTML = `${temperature} Celsius is ${convertedTemperature.toFixed(2)} Fahrenheit.`;
+            }
+        }
+    </script>
+</body>
+</html>
